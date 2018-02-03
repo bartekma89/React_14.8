@@ -1,4 +1,4 @@
-var GIPHY_LOADING_URL = 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/afb8cb36197347.5713616457ee5.gif';
+var GIPHY_LOADING_URL = 'http://tf2glass.com/trade/spinner.gif';
 
 Gif = React.createClass({
 	
@@ -7,11 +7,11 @@ Gif = React.createClass({
 		},
 
 	render: function() {
-		var url = this.props.loading? GIPHY_LOADING_URL : this.props.url;
+		var url = this.props.loading ? GIPHY_LOADING_URL : this.props.url;
 
 		return (
-				<div>
-					<a href={this.getURL} alt='view this on githy' target='new'>
+				<div id='gif'>
+					<a href={this.getURL()} alt='view this on githy' target='new'>
 						<img 
 							id='gif' 
 							src={url}
@@ -19,6 +19,6 @@ Gif = React.createClass({
 						/>
 					</a>
 				</div>
-			)
+			);
 	}	
-})
+});

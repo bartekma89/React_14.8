@@ -1,4 +1,4 @@
-var GIPHY_PUB_KEY = 'oGZzEtDiqmu0qleX2Z67hV6ny5ksw1pc';
+var GIPHY_PUB_KEY = '5YDJV5Zn6PPI5WUlvF8l37VtJnkr9Adt';
 var GIPHY_API_URL = 'https://api.giphy.com';
 
 App = React.createClass({
@@ -30,7 +30,7 @@ App = React.createClass({
 		xhr.open('GET', url);
 		xhr.onload = function() {
 			if(xhr.status === 200) {
-				var data = JSON.parse(xhr.response).data;
+				var data = JSON.parse(xhr.responseText).data;
 				var gif = {
 					url: data.fixed_width_downsampled_url,
 					sourceURL: data.url
